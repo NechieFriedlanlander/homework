@@ -1,0 +1,23 @@
+html{
+    background-color: black;
+    width: 75%;
+    margin: auto;
+}
+body{
+    background-color: white;
+    align-content: center;
+   
+    
+  
+}
+div{
+    
+    background-color: yellow;
+    border: black solid 1px;
+    text-align: center;
+    width: 12em;
+    height: 4em;
+    margin: 2em 4em 2em 4em;
+    display: inline-block;
+    
+}
