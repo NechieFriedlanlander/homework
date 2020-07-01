@@ -23,6 +23,18 @@
             position: fixed;
         }
 
+        footer {
+            background-color: black;
+            width: 100%;
+            height: 3em;
+            line-height: 3em;
+            position: fixed;
+            bottom: 0;
+            color: white;
+
+
+        }
+
         li {
             display: inline;
             padding: 1em;
@@ -45,26 +57,24 @@
             border-radius: 1em;
         }
 
+        h1 {
+            text-transform: uppercase;
+        }
+
         main {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: .5em;
-
+            grid-template-columns: 1fr;
+            text-align: justify;
         }
 
         .products img,
         .products video {
+
             width: 100%;
         }
 
-        #computers {
-            border-right: 1px solid black;
-            padding-right: .5em;
-        }
-
-        #candy {
-            border-left: 1px solid black;
-            padding-left: .5em;
+        h4 {
+            text-align: center;
         }
 
         form {
@@ -72,18 +82,54 @@
             padding-top: 2em;
             padding-bottom: 1em;
             background-color: lightgrey;
-            text-align: center
+            text-align: center;
+            border-radius: .5em;
         }
 
         input#Name,
         input#email {
             box-shadow: 4px 4px black;
             border-radius: .5em;
+
+        }
+
+        #button {
+            border-radius: .5em;
+            display: block;
+            margin: auto;
         }
 
         label {
             padding-left: 1em;
         }
+
+        @media screen and (min-width: 1000px) {
+
+            main {
+                grid-template-columns: repeat(3, 1fr);
+                gap: .5em;
+            }
+
+            #computers {
+                border-right: 1px solid black;
+                padding-right: .5em;
+            }
+
+            #candy {
+                border-left: 1px solid black;
+                padding-left: .5em;
+            }
+
+            #button {
+                display: inline;
+            }
+
+            #br {
+                display: inline;
+            }
+        }
+
+
 
         table {
             border-collapse: collapse;
@@ -103,14 +149,47 @@
 
         caption {
             caption-side: top;
+            text-align: center;
+            font-weight: bold;
+            color: black;
         }
 
         tbody tr:hover {
-            background-color: pink !important;
+            background-color: lightblue !important;
         }
 
         tbody tr:nth-child(even) {
-            background-color: lightblue;
+            background-color: lightgray;
+        }
+
+        h3 {
+            padding-top: 2em;
+        }
+
+        td {
+            text-align: right;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+        }
+
+        tfoot td:first-of-type {
+            text-align: right;
+        }
+
+        #about {
+            padding-bottom: 3em;
         }
     </style>
 </head>
@@ -129,14 +208,14 @@
     <div class="container">
         <header>
             <h1>
-                ESTUFF
+                Estuff
             </h1>
             <h2>
                 A <em>PCS</em> company
             </h2>
         </header>
         <h3 id="products">
-            <p> Products</p>
+            Products
         </h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
             obcaecati nesciunt at sapiente nulla odio eaque, earum laborum
@@ -145,14 +224,14 @@
         <main>
 
             <section class="products" id="computers">
-                Computers
+                <h4> Computers</h4>
                 <img src="macworld.jpg" alt="computers">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
                 reiciendis quisquam quis harum, quasi suscipit accusamus cumque
                 consequuntur omnis eligendi.
             </section>
             <section class="products" id="choir">
-                Choir
+                <h4>Choir</h4>
                 <video src="El Hanaar Hazeh.mp4" controls
                     poster="shira.png"></video>></video>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
@@ -164,7 +243,7 @@
             </section>
 
             <section class="products" id="candy">
-                Candy
+                <h4>Candy</h4>
                 <img src="candy.png" alt="candy">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
                 molestias tempora dolorem impedit officia? Rem officiis sed in
@@ -174,12 +253,15 @@
             </section>
         </main>
         <form action="post" id="signUp">
-            <h4> Sign Me Up!</h4>
-            <label for="Name">First Name:</label><input id="Name" name="Name"
+            <h3> Sign Me Up!</h3>
+            <label for="Name">Name:</label><input id="Name" name="Name"
                 placeholder="Your Name" required />
-            <label for="email">Email:</label><input type="email" id="email"
-                name="email" placeholder="Your email" required />
-            <input type="submit">
+
+            <div id="br"><label for="email">Email:</label><input type="email"
+                    id="email" name="email" placeholder="Your email" required />
+            </div>
+
+            <input type="submit" id="button" value="Sign me up!">
         </form>
         <h3 id="financials">
             Financials
@@ -187,77 +269,61 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
             obcaecati nesciunt at sapiente nulla odio eaque, earum laborum numquam
             recusandae.</p>
-        <table>
-            <caption>Profits- by Quater</caption>
-            <thead>
-                <th>year</th>
-                <th>1st Quater profits</th>
-                <th>2nd Quater profits</th>
-                <th>3rd Quater profits</th>
-                <th>4th Quater profits</th>
-                <th>totals</th>
-            </thead>
-            <tr>
-                <td>2012</td>
-                <td>$45698.35</td>
-                <td>$495598.35</td>
-                <td>$651879.38</td>
-                <td>$651946.29</td>
-                <td>$953564805.54</td>
-            </tr>
-            <tr>
-                <td>8968546.52</td>
-                <td>$856998.35</td>
-                <td>$926598.79</td>
-                <td>$650682.68</td>
-                <td>$651684.56</td>
-                <td>$64800035.84</td>
-            </tr>
-            <tr>
-                <td>8968546.52</td>
-                <td>$856998.35</td>
-                <td>$926598.79</td>
-                <td>$651879.38</td>
-                <td>$651946.29</td>
-                <td>$953564805.54</td>
-            </tr>
+        <div style="overflow-x:auto;">
+            <table>
+                <caption>Profits- by Quater</caption>
+                <thead>
+                    <th>year</th>
+                    <th>1st Quater profits</th>
+                    <th>2nd Quater profits</th>
+                    <th>3rd Quater profits</th>
+                    <th>4th Quater profits</th>
+                    <th>totals</th>
+                </thead>
+                <tr>
+                    <td>2012</td>
+                    <td>$45698.35</td>
+                    <td>$495598.35</td>
+                    <td>$651879.38</td>
+                    <td>$651946.29</td>
+                    <td>$953564805.54</td>
+                </tr>
+                <tr>
+                    <td>2013</td>
+                    <td>$856998.35</td>
+                    <td>$926598.79</td>
+                    <td>$650682.68</td>
+                    <td>$651684.56</td>
+                    <td>$64800035.84</td>
+                </tr>
+                <tr>
+                    <td>2014</td>
+                    <td>$856998.35</td>
+                    <td>$926598.79</td>
+                    <td>$651879.38</td>
+                    <td>$651946.29</td>
+                    <td>$953564805.54</td>
+                </tr>
 
-            <tr>
-                <td>8968546.52</td>
-                <td>$856998.35</td>
-                <td>$926598.79</td>
-                <td>$650682.68</td>
-                <td>$651684.56</td>
-                <td>$64800035.84</td>
-            </tr>
-            <tfoot>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>totals</td>
-                <td>95165478661.65</td>
-            </tfoot>
-        </table>
+                <tr>
+                    <td>2015</td>
+                    <td>$856998.35</td>
+                    <td>$926598.79</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>$64800035.84</td>
+                </tr>
+                <tfoot>
+                    <td colspan="5">Totals</td>
+                    <td>95165478661.65</td>
+                </tfoot>
+            </table>
+        </div>
         <h3 id="aboutUs">
             About Us
         </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-            obcaecati nesciunt at sapiente nulla odio eaque, earum laborum numquam
-            recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-            eveniet nesciunt, veritatis sapiente, impedit error iste illo numquam
-            dolores
-            at perspiciatis quidem, quas minima enim aperiam. Cupiditate, adipisci,
-            voluptatum odio assumenda expedita quibusdam id hic ipsa explicabo
-            aperiam
-            vero, eaque quam consequatur deleniti! Beatae officia deserunt doloremque
-            consequuntur a facilis asperiores voluptas totam dolorem. Rem ab
-            perspiciatis
-            assumenda accusantium suscipit beatae nisi. Excepturi praesentium
-            perspiciatis quos voluptates, laborum consequatur possimus voluptatibus,
-            iste
-            molestiae saepe doloremque laboriosam ullam enim? Quos beatae recusandae
-            hic
+        <p id="about">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Suscipit officia
             ipsam similique, suscipit voluptatum officia sit ullam incidunt officiis
             repellat cupiditate odio eum expedita dignissimos, consequatur soluta
             veritatis, inventore cumque pariatur. Expedita, officiis asperiores
@@ -337,11 +403,14 @@
             obcaecati modi beatae officiis quo quasi nemo? Harum maiores facilis
             dolor,
             velit quis quasi dolores praesentium.</p>
-        <footer>
+    </div>
+    <footer>
+        <div class="container">
             &copy; PCS 2019
-        </footer>
+        </div>
+    </footer>
 </body>
-</div>
+
 
 
 </html>
