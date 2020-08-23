@@ -1,0 +1,37 @@
+window.myApp.counter.incrementCount();
+window.myApp.counter.incrementCount();
+window.myApp.counter.incrementCount();
+window.myApp.counter.incrementCount();
+window.myApp.counter.incrementCount();
+window.myApp.counter.incrementCount();
+window.myApp.counter.incrementCount();
+window.myApp.counter.incrementCount();
+window.myApp.counter.incrementCount();
+window.myApp.counter.incrementCount();
+window.myApp.counter.getCount();
+
+let c1 = window.myApp.counter.createCounter();
+c1.incrementCounter();
+c1.incrementCounter();
+c1.incrementCounter();
+c1.incrementCounter();
+c1.incrementCounter();
+c1.getCounter();
+
+let c2 = window.myApp.counter.createCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.incrementCounter();
+c2.getCounter();
