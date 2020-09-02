@@ -1,3 +1,4 @@
+// SL - nice
 (function () {
   "use strict";
 
@@ -9,6 +10,7 @@
     return newArray;
   }
 
+  // no problem at all but this would be a nice candidate for an arrow function
   function double(i) {
     return (i += i);
   }

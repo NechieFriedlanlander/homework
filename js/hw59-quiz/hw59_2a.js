@@ -1,3 +1,4 @@
+// SL - nice!
 window.myApp = window.myApp || {};
 
 window.myApp.counter = (function (util) {
